@@ -55,7 +55,8 @@ duoshuo_username:
 # Share component is depend on Comment so we can NOT use share only.
 duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 # Youyan settings
-youyan_id: 2132253
+youyan_id:
+changyan_id: cysYm8Iuj
 
 
 
