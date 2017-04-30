@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "为你的github博客添加评论模块"
-date:       2017-04-30 20:39:00
+date:       2017-04-30 22:48:00
 author:     "Echo"
 header-img: "img/post-bg-miui6.jpg"
 tags:
@@ -105,7 +105,8 @@ github个人博客遇到友言的时候，尴尬的事情发生了，**github pa
 
 在左侧边栏里找到**安装畅言**，在此介绍**通过代码安装**，**复制PC端安装代码**，会得到如下代码段：
 
-```
+```html
+
 //changyan 代码
 
 <div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div>
@@ -124,6 +125,7 @@ conf: '你的conf'
 形如：
 
 ```
+
 //包括在if中
 
 {% if site.changyan_use %}
@@ -136,6 +138,7 @@ conf: '你的conf'
 });
 </script>
 {% endif %}
+
 ```
 
 这样，只要`_config.xml`文件中`changyan_use: `后**不为空**，即会调用该评论模块，不使用时置空即可。
