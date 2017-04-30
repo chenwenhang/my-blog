@@ -106,7 +106,6 @@ github个人博客遇到友言的时候，尴尬的事情发生了，**github pa
 在左侧边栏里找到**安装畅言**，在此介绍**通过代码安装**，**复制PC端安装代码**，会得到如下代码段：
 
 ```html
-
 //changyan 代码
 
 <div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div>
@@ -127,8 +126,7 @@ conf: '你的conf'
 ```
 
 //包括在if中
-
-{% if site.changyan_use %}
+&#123;% if site.changyan_use %&#123;
 <div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div>
 <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
@@ -137,7 +135,7 @@ appid: '你的appid',
 conf: '你的conf'
 });
 </script>
-{% endif %}
+&#123;% endif %&#123;
 
 ```
 
