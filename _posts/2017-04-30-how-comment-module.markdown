@@ -135,7 +135,7 @@ appid: '你的appid',
 conf: '你的conf'
 });
 </script>
-\\{% endif %\\};
+$$\{ % endif % $$\};
 
 ```
 
