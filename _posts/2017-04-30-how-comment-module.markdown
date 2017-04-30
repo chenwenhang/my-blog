@@ -128,7 +128,7 @@ conf: '你的conf'
 //包裹在if中
 //使用时请将#123;替换为{，#125;替换为}
 
-#123;% if site.changyan_use %#125;
+#123; % if site.changyan_use % #125;
 <div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div>
 <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
@@ -137,7 +137,7 @@ conf: '你的conf'
 		conf: '你的conf'
 	});
 </script>
-\{% endif %#125\};
+#123; % endif %125; ;
 
 ```
 
