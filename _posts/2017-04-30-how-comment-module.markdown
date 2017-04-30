@@ -124,10 +124,10 @@ conf: '你的conf'
 如果是制作主题模板，即希望**对多种评论模块支持**的话，则需要修改`_config.xml`文件，在其中添加一行`changyan_use: `,然后将以上代码包裹在`if`标签中，
 形如：
 
-```
+```jsp
 //包括在if中
 
-{{% if site.changyan_use %}}
+{% if site.changyan_use %}
 <div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div>
 <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
@@ -136,7 +136,7 @@ conf: '你的conf'
 		conf: '你的conf'
 	});
 </script>
-{{% endif %}};
+{% endif %};
 
 ```
 
