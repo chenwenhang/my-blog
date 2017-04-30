@@ -122,7 +122,23 @@ conf: '你的conf'
 如果只是想**对畅言单一支持**，引用以上代码至`_layouts`目录下的`post.html`的`<body></body>`标签中的合适位置即可（不同的主题可能路径略有差别）
 
 如果是制作主题模板，即希望**对多种评论模块支持**的话，则需要修改`_config.xml`文件，在其中添加一行`changyan_use: `,然后将以上代码包裹在`if`标签中，
-**{% if site.changyan_use %}**和**{% endif %};**即可：
+形如：
+
+```
+//包括在if中
+
+{% if site.changyan_use %}
+<div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div>
+<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+	window.changyan.api.config({
+		appid: '你的appid',
+		conf: '你的conf'
+	});
+</script>
+{% endif %};
+
+```
 
 这样，只要`_config.xml`文件中`changyan_use: `后**不为空**，即会调用该评论模块，不使用时置空即可。
 
