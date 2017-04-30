@@ -124,7 +124,7 @@ conf: '你的conf'
 如果是制作主题模板，即希望**对多种评论模块支持**的话，则需要修改`_config.xml`文件，在其中添加一行`changyan_use: `,然后将以上代码包裹在`if`标签中，
 形如：
 
-```jsp
+```html
 //包括在if中
 
 {% if site.changyan_use %}
