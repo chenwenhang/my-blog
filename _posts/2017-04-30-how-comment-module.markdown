@@ -123,21 +123,21 @@ conf: '你的conf'
 如果是制作主题模板，即希望**对多种评论模块支持**的话，则需要修改`_config.xml`文件，在其中添加一行`changyan_use: `,然后将以上代码包裹在`if`标签中，
 形如：
 
-```html
-
+<pre><code>
 //包括在if中
-&#123;% if site.changyan_use %&#125;
+
+{% if site.changyan_use %}
 <div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div>
 <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
-window.changyan.api.config({
-appid: '你的appid',
-conf: '你的conf'
-});
+	window.changyan.api.config({
+		appid: '你的appid',
+		conf: '你的conf'
+	});
 </script>
-\{ % endif % \};
+{% endif %};
 
-```
+</code></pre>
 
 这样，只要`_config.xml`文件中`changyan_use: `后**不为空**，即会调用该评论模块，不使用时置空即可。
 
