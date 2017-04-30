@@ -186,10 +186,22 @@ layout: default
         </div>
     </div>
 </article>
-<!-- UY BEGIN -->
-    <div id="uyan_frame"></div>
-    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2132253"></script>
-    <!-- UY END -->
+
+{% if site.youyan_id %}
+<!-- youyan 公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        var youyan_id = "{{site.youyan_id}}";
+        (function() {
+            var yy = document.createElement('script');
+            yy.type = 'text/javascript'; 
+            yy.async = true;
+            yy.src = 'http://v2.uyan.cc/code/uyan.js?uid=' + youyan_id;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(yy);
+        })();
+    </script>
+<!-- youyan 公共JS代码 end -->
+{% endif %}
 
 {% if site.duoshuo_username %}
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
@@ -201,7 +213,8 @@ layout: default
     var duoshuoQuery = {short_name: _user };
     (function() {
         var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
+        ds.type = 'text/javascript';
+        ds.async = true;
         ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
         ds.charset = 'UTF-8';
         (document.getElementsByTagName('head')[0]
