@@ -123,7 +123,7 @@ conf: '你的conf'
 如果是制作主题模板，即希望**对多种评论模块支持**的话，则需要修改`_config.xml`文件，在其中添加一行`changyan_use: `,然后将以上代码包裹在`if`标签中，
 形如：
 
-```
+```html
 
 //包括在if中
 &#123;% if site.changyan_use %&#125;
@@ -135,7 +135,7 @@ appid: '你的appid',
 conf: '你的conf'
 });
 </script>
-&#123;% endif %&#125;
+\\{% endif %\\};
 
 ```
 
