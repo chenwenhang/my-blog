@@ -4,6 +4,7 @@ title:      "为你的github博客添加评论模块"
 date:       2017-04-30 22:48:00
 author:     "Echo"
 header-img: "img/post-bg-miui6.jpg"
+catalog: true
 tags:
     - 评论模块
     - 博客
