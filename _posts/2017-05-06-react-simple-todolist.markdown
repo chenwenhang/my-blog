@@ -25,6 +25,7 @@ tags:
 
 #### 简易的 todolist
 
+<p id = "TodoList"></p>
 ![A simple todolist with React](/img/in-post/post-3-todolist.gif "TodoList")
 
 #### 使用 create-react-app 快速构建 React 开发环境
@@ -35,10 +36,19 @@ create-react-app 自动创建的项目是基于 Webpack + ES6 。
 
 ```
 $ cnpm install -g create-react-app
-$ create-react-app my-app
-$ cd my-app/
+$ create-react-app react-todolist
+$ cd react-todolist
 $ npm start
 ```
+
+在浏览器中打开 **http://localhost:3000/** ，即可看到效果。
+
+#### 组件分析
+
+首先，从[上面的效果图](#TodoList)我们可以分析出 TodoList 大致可分为三个部分，如下图：
+
+![Todolist structure](/img/in-post/post-4-structure.png "Structure")
+
 
 
 
