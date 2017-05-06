@@ -25,7 +25,7 @@ tags:
 
 #### 简易的 todolist
 
-![A simple todolist with React](img/in-post/post-3-todolist.gif "TodoList")
+![A simple todolist with React](/img/in-post/post-3-todolist.gif "TodoList")
 
 #### 使用 create-react-app 快速构建 React 开发环境
 
