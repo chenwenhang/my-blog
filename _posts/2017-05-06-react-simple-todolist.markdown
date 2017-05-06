@@ -54,7 +54,7 @@ $ npm start
 
 #### 父组件
 
-在 `app.js` 文件中，先通过 `createReactClass` 创建一个父模块，在该组件中调用添加模块和显示模块，同时添加初始化
+在 `src/app.js` 文件中，先通过 `createReactClass` 创建一个父模块，在该组件中调用添加模块和显示模块，同时添加初始化
 状态方法 `getInitialState` ，返回一个 todolist 数组，用于存储条目列表，接着添加 `handleChange`
 方法，当条目发生增删改查时调用该方法改变 state 重新渲染。代码如下：
 
@@ -179,7 +179,8 @@ bind方法的第一个参数作为this,传入bind方法的第二个以及以后�
 
 ## Thanks
 
-React 写起来确实挺有成就感的，有层次有逻辑。
+React 写起来确实挺有成就感的，有层次有逻辑。 Demo 已上传至github，地址：
+[https://github.com/chenwenhang/react-todolist](https://github.com/chenwenhang/react-todolist)
 
 能闲下来花点时间学一学自己想学的东西确实是比较愉快的，后面期末又要忙起来了。
 
