@@ -156,7 +156,7 @@ var ItemList = createReactClass({ //任务列表
     }
 });
 ```
-## Difficulty point
+## Key point
 
 #### createReactClass 的使用
 
@@ -172,9 +172,16 @@ var ItemList = createReactClass({ //任务列表
 在通过 `map` 方法遍历时，我希望在其中为每个元素绑定点击事件来触发 `deleteItem` 方法，但在控制台一直输出 `undefined` ，搞了很久
 最后发现是调用 `map` 方法后，this的指向发生了变化，里面不再有 `deleteItem` 方法。在添加 `bind(this)` 后得以解决，将this绑定回来。
 
-关于 `bind` 的官方 API 文档是这样描述的：<cite>bind方法会创建一个新函数,称为绑定函数.当调用这个绑定函数时,绑定函数会以创建它时传入
+关于 `bind` 的官方 API 文档是这样描述的：
+
+<cite>bind方法会创建一个新函数,称为绑定函数.当调用这个绑定函数时,绑定函数会以创建它时传入
 bind方法的第一个参数作为this,传入bind方法的第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的参数来调用原函数.</cite>
 
+## Thanks
 
+React 写起来确实挺有成就感的，有层次有逻辑。
 
+能闲下来花点时间学一学自己想学的东西确实是比较愉快的，后面期末又要忙起来了。
+
+致谢 React
 
