@@ -156,16 +156,22 @@ var ItemList = createReactClass({ //任务列表
     }
 });
 ```
-#### 遇到的一些坑
+## Difficulty point
 
-* 创建 react 组件，我用的是 createReactClass。 许多教程都是采用 react.createClass 的方式，但是这种方式在 React15 里
-已经不再被推荐，并且会在控制台输出 `warning` ，在 React 16 中将会**正式被弃用**，在此我采用了createReactClass方式来替代。
-使用createReactClass时候还需要在 `package.json` 文件中 `"dependencies"` 下添加依赖 `"create-react-class":"15.5.2"`，
-添加完毕命令行运行 `npm install` 安装依赖。在需要使用的文件中添加一行 `import createReactClass from 'create-react-class'; `
-即可使用。
+#### createReactClass 的使用
 
-* 在通过 `map` 方法遍历时，我希望在其中为每个元素绑定点击事件来触发 `deleteItem` 方法，但在控制台一直输出 `undefined` ，搞了很久
+创建 react 组件，我用的是 createReactClass。 许多教程都是采用 react.createClass 的方式，但是这种方式在 React15 里
+已经不再被推荐，并且会在控制台输出 `warning` ，在 React 16 中将会**正式被弃用**。
+
+在此我采用了createReactClass方式来替代。使用createReactClass时候还需要在 `package.json` 文件中 `"dependencies"` 下
+添加依赖 `"create-react-class":"15.5.2"`，添加完毕命令行运行 `npm install` 安装依赖。在需要使用的文件中添加一行
+ `import createReactClass from 'create-react-class'; `即可使用。
+
+#### 关于 bind(this)
+
+在通过 `map` 方法遍历时，我希望在其中为每个元素绑定点击事件来触发 `deleteItem` 方法，但在控制台一直输出 `undefined` ，搞了很久
 最后发现是调用 `map` 方法后，this的指向发生了变化，里面不再有 `deleteItem` 方法。在添加 `bind(this)` 后得以解决，将this绑定回来。
+
 关于 `bind` 的官方 API 文档是这样描述的：<cite>bind方法会创建一个新函数,称为绑定函数.当调用这个绑定函数时,绑定函数会以创建它时传入
 bind方法的第一个参数作为this,传入bind方法的第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的参数来调用原函数.</cite>
 
