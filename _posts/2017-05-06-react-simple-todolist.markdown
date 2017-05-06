@@ -54,33 +54,33 @@ $ npm start
 
 #### 父组件
 
-在 `src/app.js` 文件中，先通过 `createReactClass` 创建一个父模块，在该组件中调用添加模块和显示模块，同时添加初始化
-状态方法 `getInitialState` ，返回一个 todolist 数组，用于存储条目列表，接着添加 `handleChange`
-方法，当条目发生增删改查时调用该方法改变 state 重新渲染。代码如下：
+在 `src/app.js` 文件中，先创建一个父模块，在该组件中调用添加模块和显示模块，同时通过构造函数初始化状态
+，在状态中添加 todolist 数组，用于存储条目列表，接着添加 `handleChange`方法，当条目发生增
+删改查时调用该方法改变 state 重新渲染。代码如下：
 
 ```javascript
-var TodoList = createReactClass({ // 父组件
-  getInitialState:function(){
-    return {
-        todolist:[]  //返回列表
-      };
-  },
-  handleChange:function(rows){
+class TodoList extends Component{ // 父组件
+  constructor(props) {
+    super(props);
+    //初始化state，存储todolist条目数组
+    this.state = {todolist:[]};
+  }
+  handleChange(rows){
     //当发生增删改查时改变state重新渲染
     this.setState({
         todolist:rows
     });
-  },
-  render: function(){
+  }
+  render(){
     return (
         <div className="App-content">
           <h1>TodoList</h1>,
-          <AddItem todo={this.state.todolist} add={this.handleChange} />
-          <ItemList todo={this.state.todolist}  change={this.handleChange} />
+          <AddItem todo={this.state.todolist} add={this.handleChange.bind(this)} />
+          <ItemList todo={this.state.todolist}  change={this.handleChange.bind(this)} />
         </div>
-      );
+      )
   }
-});
+}
 ```
 
 #### 添加模块
@@ -90,8 +90,8 @@ var TodoList = createReactClass({ // 父组件
 代码如下：
 
 ```javascript
-var AddItem = createReactClass({ // 添加任务
-  addItem:function(){
+class AddItem extends Component{ // 添加任务
+  addItem() {
     //获取真实DOM 虚拟DOM无法获取表单元素的数据
     var inputDom = ReactDOM.findDOMNode(this.refs.inputnew);
     //获取数据
@@ -109,16 +109,16 @@ var AddItem = createReactClass({ // 添加任务
     this.props.add(rows);
     //清空输入框
     inputDom.value = "";
-  },
-  render: function(){
+  }
+  render(){
     return (
         <div>
           <input type="text" ref="inputnew" placeholder="Typing a newthing todo , click the item to delete." className="Item-input" />,
-          <button onClick={this.addItem} className="Item-button"> Add </button>
+          <button onClick={this.addItem.bind(this)} className="Item-button"> Add </button>
         </div>
-      );
+      )
   }
-});
+}
 ```
 
 #### 显示模块
@@ -127,8 +127,8 @@ var AddItem = createReactClass({ // 添加任务
 获取当前条目的标识符，根据标识符删除 todolist 对应条目，并回调改变状态重新渲染，代码如下：
 
 ```javascript
-var ItemList = createReactClass({ //任务列表
-  deleteItem:function(e){
+class ItemList extends Component{ //任务列表
+  deleteItem(e) {
     //获取todolist列表
     var rows = this.props.todo;
     //获取当前条目的data-index
@@ -137,40 +137,33 @@ var ItemList = createReactClass({ //任务列表
     rows.splice(index,1);
     //回调改变state
     this.props.change(rows);
-  },
-  render: function(){
+  }
+  render() {
     return (
         <ul id="todolist" className="Item-ul" >
           {
             // 遍历数据
-            this.props.todo.map(function(item,i){
-              return(
-                <li key={i} data-index={i} className="Item-li" onClick={this.deleteItem} > 
+            this.props.todo.map(
+              (item,i)=>{
+                return(
+                <li key={i} data-index={i} className="Item-li" onClick={this.deleteItem.bind(this)} > 
                   <span>{item}</span>
                 </li>
               )
-            }.bind(this)) //this指向发生变化！！！！！！！！绑定回来！！！
+              })
           }
         </ul>
-      );
+      )
     }
-});
+}
 ```
 ## Key point
 
-#### createReactClass 的使用
-
-创建 react 组件，我用的是 createReactClass。 许多教程都是采用 react.createClass 的方式，但是这种方式在 React15 里
-已经不再被推荐，并且会在控制台输出 `warning` ，在 React 16 中将会**正式被弃用**。
-
-在此我采用了createReactClass方式来替代。使用createReactClass时候还需要在 `package.json` 文件中 `"dependencies"` 下
-添加依赖 `"create-react-class":"15.5.2"`，添加完毕命令行运行 `npm install` 安装依赖。在需要使用的文件中添加一行
- `import createReactClass from 'create-react-class'; `即可使用。
-
 #### 关于 bind(this)
 
-在通过 `map` 方法遍历时，我希望在其中为每个元素绑定点击事件来触发 `deleteItem` 方法，但在控制台一直输出 `undefined` ，搞了很久
-最后发现是调用 `map` 方法后，this的指向发生了变化，里面不再有 `deleteItem` 方法。在添加 `bind(this)` 后得以解决，将this绑定回来。
+es6 绑定事件需要 `onClick={this.exampleFunction.bind(this)}` ，这样 `exampleFunction` 和 `bind` 里面的参数 `this`  的作用域
+才绑定到了一起（注意es5是不需要这个 `bind(this)`的），`exampleFunction` 中如果有this.name这类语句，相当于是使用参数 `this` 里面的
+变量 `name` 的值，或者使用箭头函数 `exampleFunction= (e)=> {函数体}` 。
 
 关于 `bind` 的官方 API 文档是这样描述的：
 
