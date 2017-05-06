@@ -83,7 +83,83 @@ var TodoList = createReactClass({ // 父组件
 });
 ```
 
+#### 添加模块
 
+添加模块由一个输入框和一个按钮组成，输入框用于输入条目，并为其添加 `ref` 属性。接着为按钮添加点击事件，触
+发 `addItem` 方法，用于获取输入框中的值，并将其添加至 todolist 数组，然后回调 `add` 方法，改变模块状态重新渲染，
+代码如下：
+
+```javascript
+var AddItem = createReactClass({ // 添加任务
+  addItem:function(){
+    //获取真实DOM 虚拟DOM无法获取表单元素的数据
+    var inputDom = ReactDOM.findDOMNode(this.refs.inputnew);
+    //获取数据
+    var newthing = inputDom.value.trim();
+    //如果输入的数据为空值则返回提示无法添加
+    if(newthing === ""){
+        alert("The input cannot be empty. ");
+        return;
+    }
+    //获取todolist列表
+    var rows = this.props.todo;
+    //在列表内添加新数据
+    rows.push(newthing);
+    //回调改变state
+    this.props.add(rows);
+    //清空输入框
+    inputDom.value = "";
+  },
+  render: function(){
+    return (
+        <div>
+          <input type="text" ref="inputnew" placeholder="Typing a newthing todo , click the item to delete." className="Item-input" />,
+          <button onClick={this.addItem} className="Item-button"> Add </button>
+        </div>
+      );
+  }
+});
+```
+
+#### 显示模块
+
+显示模块直接通过 `map` 方法遍历出 todolist 数组的所有元素，即可起到显示的作用。同时为每个条目添加点击事件，
+获取当前条目的标识符，根据标识符删除 todolist 对应条目，并回调改变状态重新渲染，代码如下：
+
+```javascript
+var ItemList = createReactClass({ //任务列表
+  deleteItem:function(e){
+    //获取todolist列表
+    var rows = this.props.todo;
+    //获取当前条目的data-index
+    var index = e.target.getAttribute("data-index");
+    //根据获取的data-index在rows里删除对应条目
+    rows.splice(index,1);
+    //回调改变state
+    this.props.change(rows);
+  },
+  render: function(){
+    return (
+        <ul id="todolist" className="Item-ul" >
+          {
+            // 遍历数据
+            this.props.todo.map(function(item,i){
+              return(
+                <li key={i} data-index={i} className="Item-li" onClick={this.deleteItem} > 
+                  <span>{item}</span>
+                </li>
+              )
+            }.bind(this)) //this指向发生变化！！！！！！！！绑定回来！！！
+          }
+        </ul>
+      );
+    }
+});
+```
+#### 遇到的一些坑
+
+* 创建 react 组件，我用的是 createReactClass。 许多教程都是采用 react.createClass 的方式，但是这种方式在 React
+15 里已经不再被推荐，并且将在 React 16 中**正式弃用**，在此我采用了createReactClass方式来替代
 
 
 
