@@ -182,7 +182,7 @@ bind方法的第一个参数作为this,传入bind方法的第二个以及以后�
 React 写起来确实挺有成就感的，有层次有逻辑。 Demo 已上传至github，地址：
 [https://github.com/chenwenhang/react-todolist](https://github.com/chenwenhang/react-todolist)
 
-能闲下来花点时间学一学自己想学的东西确实是比较愉快的，后面期末又要忙起来了。
+能闲下来花点时间学一学自己想学的东西还是挺愉快的，后面期末又要忙起来了。
 
 致谢 React ！
 
