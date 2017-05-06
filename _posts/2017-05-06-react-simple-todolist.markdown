@@ -43,14 +43,45 @@ $ npm start
 
 在浏览器中打开 **http://localhost:3000/** ，即可看到效果。
 
-#### 组件分析
+#### 组件模块
 
 首先，从[上面的效果图](#TodoList)我们可以分析出 TodoList 大致可分为三个部分，如下图：
 
 ![Todolist structure](/img/in-post/post-4-structure.png "Structure")
 
+**红色部分为父模块**，包裹了整个 app ；**绿色部分为添加模块**，用于添加条目；**黄色部分
+为显示模块**，用于显示条目，并实现点击删除功能。
 
+#### 父组件
 
+先通过 `createReactClass` 创建一个父模块，在该组件中调用添加模块和显示模块，同时添加初始化
+状态方法`getInitialState`，返回一个 todolist 数组，用于存储条目列表，接着添加 `handleChange`
+方法，当条目发生增删改查时调用该方法改变 state 重新渲染。代码如下：
+
+```jsx
+var TodoList = createReactClass({ // 父组件
+  getInitialState:function(){
+    return {
+        todolist:[]  //返回列表
+      };
+  },
+  handleChange:function(rows){
+    //当发生增删改查时改变state重新渲染
+    this.setState({
+        todolist:rows
+    });
+  },
+  render: function(){
+    return (
+        <div className="App-content">
+          <h1>TodoList</h1>,
+          <AddItem todo={this.state.todolist} add={this.handleChange} />
+          <ItemList todo={this.state.todolist}  change={this.handleChange} />
+        </div>
+      );
+  }
+});
+```
 
 
 
