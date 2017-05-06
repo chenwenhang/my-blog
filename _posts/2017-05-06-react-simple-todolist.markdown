@@ -10,7 +10,7 @@ tags:
     - javascript
 ---
 
-> “A simple todolist with React”
+> “A simple Todolist with React”
 
 ## Walk with difficulty
 
@@ -18,12 +18,12 @@ tags:
 甚至可以说是一团乱。突然跳出来这么多没听说过的术语，npm、webpack、redux、routing 等等，根本不知道如何处理，
 也就耽搁了。最近再次捡起，积累了几次项目经验，写起来虽然依然有些颠簸，但却比之前的毫无头绪进步了不少。
 
-一个简单的 todolist 制作过程。
+一个简单的 Todolist 制作过程。
 
 ---
 ## Learn & apply immediately 
 
-#### 简易的 todolist
+#### 简易的 Todolist
 
 <p id = "TodoList"></p>
 ![A simple todolist with React](/img/in-post/post-3-todolist.gif "TodoList")
@@ -54,8 +54,8 @@ $ npm start
 
 #### 父组件
 
-先通过 `createReactClass` 创建一个父模块，在该组件中调用添加模块和显示模块，同时添加初始化
-状态方法`getInitialState`，返回一个 todolist 数组，用于存储条目列表，接着添加 `handleChange`
+在 `app.js` 文件中，先通过 `createReactClass` 创建一个父模块，在该组件中调用添加模块和显示模块，同时添加初始化
+状态方法 `getInitialState` ，返回一个 todolist 数组，用于存储条目列表，接着添加 `handleChange`
 方法，当条目发生增删改查时调用该方法改变 state 重新渲染。代码如下：
 
 ```javascript
@@ -85,7 +85,7 @@ var TodoList = createReactClass({ // 父组件
 
 #### 添加模块
 
-添加模块由一个输入框和一个按钮组成，输入框用于输入条目，并为其添加 `ref` 属性。接着为按钮添加点击事件，触
+添加模块由一个输入框和一个按钮组成，输入框用于输入条目，我们为其添加 `ref` 属性。接着为按钮添加点击事件，触
 发 `addItem` 方法，用于获取输入框中的值，并将其添加至 todolist 数组，然后回调 `add` 方法，改变模块状态重新渲染，
 代码如下：
 
