@@ -8,6 +8,7 @@ header-img: "img/post-bg-2017.jpg"
 catalog: true
 tags:
     - 生活
+    - 博客
 ---
 
 > “Yeah It's on. ”
