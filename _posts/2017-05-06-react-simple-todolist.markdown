@@ -58,7 +58,7 @@ $ npm start
 状态方法`getInitialState`，返回一个 todolist 数组，用于存储条目列表，接着添加 `handleChange`
 方法，当条目发生增删改查时调用该方法改变 state 重新渲染。代码如下：
 
-```jsx
+```javascript
 var TodoList = createReactClass({ // 父组件
   getInitialState:function(){
     return {
