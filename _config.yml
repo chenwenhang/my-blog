@@ -92,11 +92,11 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "Su",
-        href: "http://su.gallery/"
+        title: "Hux",
+        href: "http://huangxuan.me/"
     },{
-        title: "乱序",
-        href: "http://mida.re/"
+        title: "沈顺",
+        href: "https://wss534857356.github.io/"
     },{
         title: "前端外刊评论",
         href: "http://qianduan.guru/"
