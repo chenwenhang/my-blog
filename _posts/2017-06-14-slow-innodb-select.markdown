@@ -102,7 +102,12 @@ GROUP BY
 
 第一反应是数据表没加索引以至于查询效率低下，然而检查数据库的时候发现是有索引的，和原服务器上一样。
 
-然后我觉得可能是索引存在但未被正常使用，通过`EXPLAIN`命令得到下图结果：
+然后我觉得可能是索引存在但未被正常使用，先直接查看sql语句执行状况：
+
+![Sql state](/img/in-post/post-4-state.png "state")
+
+
+通过`EXPLAIN`命令得到下图结果：
 
 ![Explain sql](/img/in-post/post-4-explain.png "Explain")
 
@@ -113,3 +118,13 @@ GROUP BY
 
 最后看`type`字段，这个字段是指**连接类型**，影响也较大，比较复杂，有兴趣的朋友可以去[zhuxineli的专栏](http://blog.csdn.net/zhuxineli/article/details/14455029)
 学习一下，这里不再赘述。
+
+综合以上，sql语句本身和数据库索引都是没有问题的。
+
+但是在
+
+
+
+
+
+
