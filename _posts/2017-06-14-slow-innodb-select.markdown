@@ -106,4 +106,10 @@ GROUP BY
 
 ![Explain sql](/img/in-post/post-4-explain.png "Explain")
 
+先看`key`字段，这个字段意指**使用到的索引**，这里每一行均有值，且运用到了`device_group`、`INDEX_DEVICE_ID`等索引，说明
+索引是起作用的。
 
+再看`key_len`字段，这是指**使用的索引长度**，索引长度也恰当并不算长，不会耗费太多时间。
+
+最后看`type`字段，这个字段是指**连接类型**，影响也较大，比较复杂，有兴趣的朋友可以去[zhuxineli的专栏](http://blog.csdn.net/zhuxineli/article/details/14455029)
+学习一下，这里不再赘述。
