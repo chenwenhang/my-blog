@@ -10,7 +10,7 @@ tags:
     - 服务器
 ---
 
-> “Innodb is not always suitable”
+> “Gain experience from mistakes”
 
 ## A Server interface is slow to respond
 
