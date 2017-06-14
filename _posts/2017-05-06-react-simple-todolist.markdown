@@ -47,7 +47,7 @@ $ npm start
 
 首先，从[上面的效果图](#TodoList)我们可以分析出 TodoList 大致可分为三个部分，如下图：
 
-![Todolist structure](/img/in-post/post-4-structure.png "Structure")
+![Todolist structure](/img/in-post/post-3-structure.png "Structure")
 
 **红色部分为父模块**，包裹了整个 app ；**绿色部分为添加模块**，用于添加条目；**黄色部分
 为显示模块**，用于显示条目，并实现点击删除功能。
