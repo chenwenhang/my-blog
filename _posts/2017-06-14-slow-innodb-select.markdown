@@ -106,8 +106,10 @@ GROUP BY
 
 ![Sql state](/img/in-post/post-4-state.png "state")
 
+发现`Handler_read_key`和`Handler_read_next`值都高，说明索引应当被正常使用了，参数具体含义参考
+[浅谈MySQL之 Handler_read_*参数](http://gfsunny.blog.51cto.com/990565/1558480)
 
-通过`EXPLAIN`命令得到下图结果：
+为了确认索引正常使用，通过`EXPLAIN`命令得到下图结果：
 
 ![Explain sql](/img/in-post/post-4-explain.png "Explain")
 
