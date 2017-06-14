@@ -34,7 +34,7 @@ tags:
 第二个想到的是**原服务器上 apache 添加了一些模块**，原封不动复制过去，但问题依然没有改善。
 
 
-#### 代码断点测试
+#### 代码执行时间测试
 
 无奈，只能一步步开始测试代码的执行时间，为接口文件添加执行时间函数
 
@@ -45,4 +45,8 @@ function getmicrotime()
     return ((float)$usec + (float)$sec);
 }
 ```
+
+通过`$time_start = getmicrotime();`和`$time_end = getmicrotime();`记录时间点，然后相减得出执行时间，对几个部分测试结果如下：
+
+![Time check](/img/in-post/post-4-time.png "Time")
 
