@@ -12,7 +12,7 @@ tags:
 
 > “Innodb is not always suitable”
 
-## The server interface is slow to respond
+## A Server interface is slow to respond
 
 前几天一个项目的服务器要到期了，客户买了新服务器，需要我去把项目迁移到新服务器上，在迁移完毕之后，测试接口的时候
 却发现其中一个接口的响应时间特别长，等待时间达到了九十多秒。项目的代码是完全相同的，数据库也是sql文件原封不动的导入
@@ -25,4 +25,10 @@ tags:
 * PHP 5.5.12
 * Mysql 5.6.17
 
-## “The process of checking out errors”
+## The process of checking out errors
+
+#### 版本 & 环境
+
+我第一个想到的是**版本问题**，经检查，服务器、数据库以及语言的版本都与原服务器一致。
+
+第二个想到的是原服务器上 apache 添加了一些的模块，原封不动复制过去问题依然没有改善。
