@@ -131,8 +131,17 @@ mysql广泛使用的两个数据库引擎`innodb`和`myisam`差异还是很大�
 
 简答点说，`Innodb`对**数据表的更新友好**，当数据库需要**频繁大量地增删改**时，推荐`Innodb`，`Myisam`对**查询友好**，如果执行**大量查询操作**，推荐使用`Myisam`。
 
+更换数据库引擎为`Myisam`，问题解决，其实网络上也有一些优化`Innodb`的方法，但服务器第二天就要到期了必须马上完成迁移，也就没有尝试了，有兴趣的朋友可以去看看。
 
 
+> “We are never afraid of the competitors who are as smart as god but the teammates who are as incapable as pigs”
+
+## Sleepy...
+
+以下是吐槽……
+
+昨晚一直忙到将近两点钟，也没有解决问题，如果不是[师父](https://wss534857356.github.io/)救急那就真的gg了。服务器几天前就迁移好了，问了测试说有没有问题，都说一切正常，一直到交接的时候人家跟我说接口响应速度太慢，也是醉了，大兄弟测试的时候就不能长点心么。
+好困啊T_T...
 
 
 
