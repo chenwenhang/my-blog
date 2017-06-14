@@ -27,8 +27,21 @@ tags:
 
 ## The process of checking out errors
 
-#### 版本 & 环境
+#### 版本 & apache模块
 
 我第一个想到的是**版本问题**，经检查，服务器、数据库以及语言的版本都与原服务器一致。
 
-第二个想到的是原服务器上 apache 添加了一些的模块，原封不动复制过去问题依然没有改善。
+第二个想到的是**原服务器上 apache 添加了一些模块**，原封不动复制过去问题依然没有改善。
+
+
+#### 代码断点测试
+
+无奈，只能一步步开始测试代码的执行时间，为接口文件添加执行时间函数
+
+```php
+function getmicrotime()
+{
+    list($usec, $sec) = explode(" ",microtime());
+    return ((float)$usec + (float)$sec);
+}
+```
