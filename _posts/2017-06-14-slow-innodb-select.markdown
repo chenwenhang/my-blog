@@ -127,9 +127,13 @@ GROUP BY
 
 接着我开始怀疑是数据库配置问题，我认为可能是内存分配给mysql的太小了导致每次查询都会产生大量磁盘I/O，延缓查询速度。
 
-于是我去更改了`my.ini`的配置。添加了`max_connections = 1024`增大最大连接数、`key_buffer_size=128M`增大索引块缓冲区大小，并添加`innodb_buffer_pool_size = 512M`将`Innodb`的内存池大小设置为512M，再次测试，发现确实有一定效果，sql执行时间从一百多秒降低到七十多秒，但仍然没有从根本上解决问题。
+于是我去更改了`my.ini`的配置。添加了`max_connections = 1024`增大最大连接数、`key_buffer_size=128M`增大索引块缓冲区大小，并添加`innodb_buffer_pool_size = 512M`将`Innodb`的内存池大小设置为512M。具体参数配置参考[my.ini优化mysql数据库性能的十个参数](http://www.jb51.net/article/72577.htm)
+
+再次测试，发现确实有一定改善，sql执行时间从一百多秒降低到七十多秒，但仍然没有从根本上解决问题，效率依旧低下。
 
 #### 数据库引擎
+
+> “Innodb is not always suitable”
 
 最后，在我[师父](https://wss534857356.github.io/)的指引下找到了错误，发现是数据库引擎的问题。
 
