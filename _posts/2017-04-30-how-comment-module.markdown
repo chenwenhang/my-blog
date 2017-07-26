@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "为你的github博客添加评论模块"
+subtitle:   "Add comment module for your github block"
 date:       2017-04-30 22:48:00
 author:     "Echo"
 header-img: "img/post-bg-miui6.jpg"
