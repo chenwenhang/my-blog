@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "批量导入联系人并群发短信"
+subtitle:   "The Next Generation Application Model For The Web - Progressive Web App"
 date:       2017-07-25 17:41:00
 author:     "Echo"
 header-img: "img/post-bg-ios9-web.jpg"
