@@ -29,7 +29,7 @@ tags:
 )和[线性代数知识框架](https://www.processon.com/view/link/5c0a7307e4b054cdc55a5fc0
 )，这里给大家做个参考（点击上面的蓝色链接即可进入查看），当然不需要做成我这样，只是告诉大家知识需要总结，用你自己的方式，内化于心。
 
-* **有自己的复习计划**，做一个TodoList，把接下来要做的事情写下来，一件一件去完成。我在初试前一个月左右写了[初试冲刺复习计划](https://www.processon.com/mindmap/5c077fede4b0615cb4da8bb3)和[复试计划](https://www.processon.com/mindmap/5c7fd013e4b0ab74ecce2e53)
+* **有自己的复习计划**，做一个TodoList，把接下来要做的事情写下来，一件一件去完成。我在初试前一个月左右写了[初试冲刺复习计划](https://www.processon.com/view/link/5c9d800de4b00f8893ed4d3a)和[复试复习计划](https://www.processon.com/view/link/5c9d8023e4b0ec8ff35d189f)，同样给大家做个参考。
 
 * **高效，专注**，这点极其重要，写着题目三心二意，那不如不写，成效会大打折扣。
 
