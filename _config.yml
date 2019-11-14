@@ -6,7 +6,7 @@ email: chenwenhang@outlook.com
 description: "关于前端与设计 | Echo，Web & Mobile Lover，Front-End Engineer | 这里是 @不努力明年就是本命年 的个人博客，与你一起发现更大的世界。"
 keyword: "陈文航, Echo陈文航, Echo,  chenwenhang, @不努力明年就是本命年, 陈文航的博客, Echo陈文航 Blog, 博客, 个人网站, 互联网, 前端, 设计, 产品"
 url: "https://chenwenhang.github.io/my-blog"              # your host, for absolute URL
-baseurl: "/my-blog"                             # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
