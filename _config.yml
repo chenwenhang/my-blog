@@ -10,6 +10,7 @@ baseurl: "/blog"                             # for example, '/blog' if your blog
 
 
 
+
 # SNS settings
 RSS: false
 weibo_username:     PStreasure
