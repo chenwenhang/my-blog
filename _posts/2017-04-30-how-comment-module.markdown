@@ -35,7 +35,7 @@ tags:
 * 支持多语言
 * 无广告，极简，清爽无比
 * 无干扰模式（设置 distractionFreeMode 为 true 开启）
-* 快捷键提交评论 （cmd|ctrl + enter）
+* 快捷键提交评论 
 
 缺点：
 
