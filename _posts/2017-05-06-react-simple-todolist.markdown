@@ -7,7 +7,7 @@ header-img: "img/post-bg-js-module.jpg"
 catalog: true
 tags:
     - React
-    - javascript
+    - 前端
 ---
 
 > “A simple Todolist with React”

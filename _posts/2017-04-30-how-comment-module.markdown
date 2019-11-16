@@ -7,9 +7,7 @@ author:     "Echo"
 header-img: "img/post-bg-miui6.jpg"
 catalog: true
 tags:
-    - 评论模块
-    - 博客
-    - github
+    - 小知识
 ---
 
 > “Add comment module in your blog”
@@ -26,6 +24,24 @@ tags:
 ## Compare
 
 > The merits and demerits between these modules.
+
+### [ NEW ] Gitalk
+***Updated on November 16, 2019***
+
+[Gitalk](https://gitalk.github.io/)是一个基于 GitHub Issue 和 Preact 开发的评论插件。畅言广告太烦，昨天手机浏览博客的时候居然引导我打开支付宝抢红包...简直不能忍。这几年第三方评论模块基本倒的差不多了，也让Gitalk逐渐流行开来，目前该博客已经全站采用Gitalk。
+
+优点：
+
+* 支持多语言
+* 无广告，极简，清爽无比
+* 无干扰模式（设置 distractionFreeMode 为 true 开启）
+* 快捷键提交评论 （cmd|ctrl + enter）
+
+缺点：
+
+* 只能用 Github 帐号登录，门槛较高
+
+安装教程：[一款超好用的第三方评论插件--Gittalk](https://www.jianshu.com/p/4242bb065550)
 
 ### Disqus
 

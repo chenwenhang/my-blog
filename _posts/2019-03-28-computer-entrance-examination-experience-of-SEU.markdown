@@ -7,8 +7,7 @@ author:     "Echo"
 header-img: "img/post-bg-seu.jpg"
 catalog: true
 tags:
-    - 考研
-    - 东南大学
+    - 生活
 ---
 
 > “Hello, SEU!”

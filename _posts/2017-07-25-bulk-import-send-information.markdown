@@ -7,8 +7,7 @@ author:     "Echo"
 header-img: "img/post-bg-ios9-web.jpg"
 catalog: true
 tags:
-    - 杂记
-    - 生活
+    - 小知识
 ---
 
 > “Design Comes From LifePursue Inspiration in Life”

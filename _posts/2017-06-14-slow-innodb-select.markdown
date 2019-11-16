@@ -7,8 +7,9 @@ author:     "Echo"
 header-img: "img/post-bg-os-metro.jpg"
 catalog: true
 tags:
-    - mysql
+    - MySQL
     - 服务器
+    - 数据库
 ---
 
 > “Gain experience from mistakes”
