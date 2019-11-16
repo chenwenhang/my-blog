@@ -146,6 +146,8 @@ layout: default
                 <!-- 畅言 评论框 end -->
                 {% endif %}
 
+                <div id="gitalk-container"></div>
+
             </div>  
 
     <!-- Side Catalog Container -->
@@ -202,6 +204,28 @@ layout: default
         </div>
     </div>
 </article>
+
+
+<script type="text/javascript">
+    
+    <-- 生成 gitalk 插件-->
+var gitalk = new Gitalk({
+  clientID: 'f4a8175a95c04a8f070b', //Client ID
+
+  clientSecret: '354b5dddea46744ce48e42cae8beb718e77fb6a1', //Client Secret
+
+  repo: 'my-blog-talk',//仓库名称
+  owner: 'chenwenhang',//仓库拥有者
+  admin: ['chenwenhang'],
+  id: location.href,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+</script>
+
+
+
 {% if site.changyan_id %}
 <!-- 畅言 公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript"> 
