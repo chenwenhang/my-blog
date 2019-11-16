@@ -7,7 +7,7 @@ header-img: "img/post-bg-js-module.jpg"
 catalog: true
 tags:
     - React
-    - javascript
+    - 前端
 ---
 
 > “A simple Todolist with React”
@@ -26,7 +26,8 @@ tags:
 #### 简易的 Todolist
 
 <p id = "TodoList"></p>
-![A simple todolist with React](/img/in-post/post-3-todolist.gif "TodoList")
+
+![A simple todolist with React]({{site.baseurl}}/img/in-post/post-3-todolist.gif "TodoList")
 
 #### 使用 create-react-app 快速构建 React 开发环境
 
@@ -47,7 +48,7 @@ $ npm start
 
 首先，从[上面的效果图](#TodoList)我们可以分析出 TodoList 大致可分为三个部分，如下图：
 
-![Todolist structure](/img/in-post/post-3-structure.png "Structure")
+![Todolist structure]({{site.baseurl}}/img/in-post/post-3-structure.png "Structure")
 
 **红色部分为父模块**，包裹了整个 app ；**绿色部分为添加模块**，用于添加条目；**黄色部分
 为显示模块**，用于显示条目，并实现点击删除功能。

@@ -7,8 +7,9 @@ author:     "Echo"
 header-img: "img/post-bg-os-metro.jpg"
 catalog: true
 tags:
-    - mysql
+    - MySQL
     - 服务器
+    - 数据库
 ---
 
 > “Gain experience from mistakes”
@@ -50,7 +51,7 @@ function getmicrotime()
 通过`$time_start = getmicrotime();`和`$time_end = getmicrotime();`记录时间点，然后相减得出执行时间，放入到结果集中返回前台。
 对几个部分测试结果如下：
 
-![Time check](/img/in-post/post-4-time.png "Time")
+![Time check]({{site.baseurl}}/img/in-post/post-4-time.png "Time")
 
 可以看到`$time4`的执行时间极长，已经达到了104秒。而这部分代码对应的是一句sql的执行，sql语句如下：
 
@@ -105,14 +106,14 @@ GROUP BY
 
 然后我觉得可能是**索引存在但未被正常使用**，先直接查看sql语句执行状况：
 
-![Sql state](/img/in-post/post-4-state.png "state")
+![Sql state]({{site.baseurl}}/img/in-post/post-4-state.png "state")
 
 发现`Handler_read_key`和`Handler_read_next`值都高，说明索引应当被正常使用了，参数具体含义参考
 [浅谈MySQL之 Handler_read_*参数](http://gfsunny.blog.51cto.com/990565/1558480)
 
 为了确认索引正常使用，通过`EXPLAIN`命令得到下图结果：
 
-![Explain sql](/img/in-post/post-4-explain.png "Explain")
+![Explain sql]({{site.baseurl}}/img/in-post/post-4-explain.png "Explain")
 
 先看`key`字段，这个字段是指**使用到的索引**，这里每一行均有值，且运用到了`device_group`、`INDEX_DEVICE_ID`等索引，说明
 索引是起作用的。

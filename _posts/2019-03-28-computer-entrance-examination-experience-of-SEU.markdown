@@ -7,8 +7,7 @@ author:     "Echo"
 header-img: "img/post-bg-seu.jpg"
 catalog: true
 tags:
-    - 考研
-    - 东南大学
+    - 生活
 ---
 
 > “Hello, SEU!”
@@ -133,7 +132,7 @@ tags:
 
 这是整个考研期间所用复习资料，左上角那一摞是用掉的草稿纸，右上角是各种讲义。
 
-![Books](/img/in-post/post-6-books.JPG "Books")
+![Books]({{site.baseurl}}/img/in-post/post-6-books.JPG "Books")
 
 作为服务外包组项目经理，上一任项目经理太优秀确实会造成很大压力。特别是决定考研以来，一直遗憾没能像顺哥教我那样，把所会的技术都教给学弟学妹们，这是我的失职。
 

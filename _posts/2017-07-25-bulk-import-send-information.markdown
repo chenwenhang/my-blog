@@ -7,8 +7,7 @@ author:     "Echo"
 header-img: "img/post-bg-ios9-web.jpg"
 catalog: true
 tags:
-    - 杂记
-    - 生活
+    - 小知识
 ---
 
 > “Design Comes From LifePursue Inspiration in Life”
@@ -35,7 +34,7 @@ tags:
 
 电脑下载通讯录模版文件，下载地址：[https://pan.baidu.com/s/1slBanW5](https://pan.baidu.com/s/1slBanW5)，文档结构如图：
 
-![Excel](/img/in-post/post-5-excel.png "Excel")
+![Excel]({{site.baseurl}}/img/in-post/post-5-excel.png "Excel")
 
 在“名”这一栏填入姓名（若没有就随便写，把号码重新复制一遍也行），“其他号码”填入号码，其他栏可以空着，（建议不超过350个号码）。
 
