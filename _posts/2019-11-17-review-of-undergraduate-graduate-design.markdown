@@ -7,8 +7,8 @@ author:     "Echo"
 header-img: "img/post-bg-review-undergraduate-design.jpg"
 catalog: true
 tags:
-	- 数据库
-	- 服务器
+    - 服务器
+    - 数据库
     - 前端
     - 后端
     - 项目总结

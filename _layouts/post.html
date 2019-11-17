@@ -177,11 +177,11 @@ layout: default
                 {% if site.featured-tags %}
                 <section>
                     <hr class="hidden-sm hidden-xs">
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <h5><a href="{{ site.baseurl }}/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
         				{% for tag in site.tags %}
                             {% if tag[1].size > {{site.featured-condition-size}} %}
-                				<a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                				<a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
                                     {{ tag[0] }}
                                 </a>
                             {% endif %}
@@ -205,7 +205,7 @@ layout: default
     </div>
 </article>
 
-
+<!-- 
 <script type="text/javascript">
 var gitalk = new Gitalk({
   clientID: 'f4a8175a95c04a8f070b', //Client ID
@@ -220,7 +220,7 @@ var gitalk = new Gitalk({
 })
 
 gitalk.render('gitalk-container')
-</script>
+</script> -->
 
 
 
