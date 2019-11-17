@@ -4,7 +4,7 @@ title:      "本科毕业设计回顾"
 subtitle:   "Review of undergraduate graduation project"
 date:       2019-11-17 08:16:00
 author:     "Echo"
-header-img: "img/post-bg-review-undergraduate-design.png"
+header-img: "img/post-bg-review-undergraduate-design.jpg"
 catalog: true
 tags:
 	- 数据库
