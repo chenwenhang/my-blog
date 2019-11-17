@@ -7,7 +7,6 @@ author:     "Echo"
 header-img: "img/post-bg-os-metro.jpg"
 catalog: true
 tags:
-    - MySQL
     - 服务器
     - 数据库
 ---

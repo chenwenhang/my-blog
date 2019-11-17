@@ -6,7 +6,6 @@ author:     "Echo"
 header-img: "img/post-bg-js-module.jpg"
 catalog: true
 tags:
-    - React
     - 前端
 ---
 
