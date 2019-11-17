@@ -4,7 +4,7 @@ title:      "东南大学计算机考研加调剂经验"
 subtitle:   "Computer entrance examination experience of Southeast University"
 date:       2019-03-28 22:06:00
 author:     "Echo"
-header-img: "img/post-bg-seu.jpg"
+header-img: "img/post-bg-seu.webp"
 catalog: true
 tags:
     - 生活

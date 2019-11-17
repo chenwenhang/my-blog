@@ -4,7 +4,7 @@ title:      "Hello First Blog"
 subtitle:   " \"Hello World, Hello Blog\""
 date:       2017-04-30 17:33:00
 author:     "Echo"
-header-img: "img/post-bg-2017.jpg"
+header-img: "img/post-bg-2017.webp"
 catalog: true
 tags:
     - 生活

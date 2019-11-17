@@ -3,10 +3,9 @@ layout:     post
 title:      "React制作简易Todolist"
 date:       2017-05-06 09:51:00
 author:     "Echo"
-header-img: "img/post-bg-js-module.jpg"
+header-img: "img/post-bg-js-module.webp"
 catalog: true
 tags:
-    - React
     - 前端
 ---
 
